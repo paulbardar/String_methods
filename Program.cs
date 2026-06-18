@@ -6,6 +6,48 @@
         {
             Console.WriteLine("Hello, World!");
 
+            /*Task 5
+            Користувач з клавіатури вводить у рядок арифметичний вираз. 
+            Додаток має порахувати його результат. 
+            Необхідно підтримувати тільки дві операції: + і -
+             */
+
+            Console.WriteLine("Enter an expression (e.g. 10 + 5 - 3):");
+            string input = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(input)) return;
+            double result = 0;
+            char currentOp = '+';
+            string currentNumber = "";
+
+            string expression = input.Replace(" ", "") + " ";
+
+            for (int i = 0; i < expression.Length; i++)
+            {
+                char c = expression[i];
+
+                if (char.IsDigit(c) || c == '.' || c == ',')
+                {
+                    currentNumber += c;
+                }
+                else if (c == '+' || c == '-' || i == expression.Length - 1)
+                {
+                    if (currentNumber != "")
+                    {
+                        double number = Convert.ToDouble(currentNumber.Replace(',', '.'));
+
+                        if (currentOp == '+') result += number;
+                        else if (currentOp == '-') result -= number;
+                    }
+
+                    currentOp = c;
+                    currentNumber = "";
+                }
+            }
+
+            Console.WriteLine($"Result: {result}");
+
+
             // Task 3
             /*
                 Користувач вводить рядок із клавіатури. 
@@ -15,7 +57,7 @@
                 що знаходиться на деякому постійному числі позицій лівіше або правіше за нього в алфавіті. 
                 Наприклад, у шифрі зі зсувом вправо на 3, A була б замінена на D, B стане E, і так далі".
              */
-
+            /*
             Console.Write("Enter text for Encrypting: ");
             string inputText = Console.ReadLine();
 
@@ -29,8 +71,10 @@
             Console.WriteLine($"Decrypted text: {decryptedText}");
 
             Console.ReadLine();
-        }
 
+            */
+        }
+        /*Task 3
         static string Encrypt(string text, int shift)
         {
             char[] buffer = text.ToCharArray();
@@ -55,5 +99,6 @@
         {
             return Encrypt(text, 26 - shift);
         }
+        */
     }
 }

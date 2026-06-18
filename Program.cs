@@ -12,7 +12,7 @@
             Якщо неприпустиме слово знайдено, воно має бути замінено на набір символів *. 
             За підсумками роботи додатка необхідно показати статистику дій.
              */
-            /*
+            
             string text = "To be, or not to be, that is the question, " +
                 "And by opposing end them? To die: to sleep; " +
                 "Devoutly to be wish'd. To die, to sleep";
@@ -33,7 +33,7 @@
             Console.WriteLine("--- STATISTICS ---");
             Console.WriteLine("Search word: " + badWord);
             Console.WriteLine("Count of substitutions: " + count);
-            */
+            
 
             /* Task 6
              Користувач з клавіатури вводить деякий текст. 

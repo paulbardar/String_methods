@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-
+            // add screenshots
 
             /*Task 7
              Створіть додаток, що перевіряє текст на неприпустимі слова. 

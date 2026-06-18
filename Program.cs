@@ -6,12 +6,70 @@
         {
             Console.WriteLine("Hello, World!");
 
+
+            /*Task 7
+             Створіть додаток, що перевіряє текст на неприпустимі слова. 
+            Якщо неприпустиме слово знайдено, воно має бути замінено на набір символів *. 
+            За підсумками роботи додатка необхідно показати статистику дій.
+             */
+
+
+
+            /* Task 6
+             Користувач з клавіатури вводить деякий текст. 
+            Додаток повинен змінювати регістр першої літери кожного речення на букву у верхньому регістрі.
+             */
+            /*
+            Console.WriteLine("Enter text:");
+            string input = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(input)) return;
+
+            char[] separators = { '.', '!', '?' };
+            string[] sentences = input.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
+            string result = "";
+            int currentPos = 0;
+
+            foreach (string sentence in sentences)
+            {
+                string trimmed = sentence.TrimStart();
+                int spacesCount = sentence.Length - trimmed.Length;
+                string leadingSpaces = sentence.Substring(0, spacesCount);
+
+                if (trimmed.Length > 0)
+                {
+                    char firstChar = char.ToUpper(trimmed[0]);
+                    string restOfSentence = trimmed.Substring(1);
+
+                    result += leadingSpaces + firstChar + restOfSentence;
+                }
+                else
+                {
+                    result += leadingSpaces;
+                }
+
+                int separatorIndex = input.IndexOfAny(separators, currentPos);
+                if (separatorIndex != -1)
+                {
+                    result += input[separatorIndex];
+                    currentPos = separatorIndex + 1;
+                }
+                else
+                {
+                    result += ".";
+                }
+            }
+
+            Console.WriteLine("\nResult:");
+            Console.WriteLine(result);
+            */
             /*Task 5
             Користувач з клавіатури вводить у рядок арифметичний вираз. 
             Додаток має порахувати його результат. 
             Необхідно підтримувати тільки дві операції: + і -
              */
-
+            /*
             Console.WriteLine("Enter an expression (e.g. 10 + 5 - 3):");
             string input = Console.ReadLine();
 
@@ -46,7 +104,7 @@
             }
 
             Console.WriteLine($"Result: {result}");
-
+            */
 
             // Task 3
             /*
